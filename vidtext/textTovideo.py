@@ -36,3 +36,4 @@ def TextToVideo(sourceData):
 	    out.write(img_array[i])
 	out.release()
 	shutil.rmtree(dir_path, ignore_errors=True)
+	shutil.rmtree('downloads', ignore_errors=True)
