@@ -7,7 +7,7 @@ def getImage(listData):
 	key_collection = r.get_ranked_phrases_with_scores()
 	keyword = key_collection[0][1]
 	response = google_images_download.googleimagesdownload()
-	arguments = {"keywords":keyword,"limit":2,"print_urls":True}
+	arguments = {"keywords":keyword,"limit":1,"print_urls":True}
 	reponsePaths = response.download(arguments)
 	path = reponsePaths[keyword][0]
 	return path

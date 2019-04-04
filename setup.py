@@ -27,18 +27,12 @@ setup(
 
     packages=find_packages(exclude=('tests',)),
 
-    install_requires=[],
+    install_requires=["pillow","google_images_download","rake_nltk","opencv-python"],
 
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
+    'Development Status :: 4 - Beta', 
+    'Intended Audience :: System Administrators', 
+    'License :: OSI Approved :: Apache Software License',
+    'Programming Language :: Python :: 3'
     ],
 )
