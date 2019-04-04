@@ -31,16 +31,6 @@ def TextToVideo(sourceData):
 		size = (width,height)
 		img_array.append(videoimg)
 		i = ''.join(random.choices(string.ascii_uppercase + string.digits))
-	"""for text in range(len(li)):
-		img = ImageText((800, 600), background=secure_random.choice(backcolor))
-		img.write_text_box((50, 150), li[text], box_width=700, font_filename=font,font_size=30, color=color, place='justify')
-		img.save(dir_path+i+'.png')
-		i = ''.join(random.choices(string.ascii_uppercase + string.digits))
-	for filename in glob.glob(dir_path+'*.png'):
-	    img = cv2.imread(filename)
-	    height, width, layers = img.shape
-	    size = (width,height)
-	    img_array.append(img)"""
 	out = cv2.VideoWriter('project.avi',cv2.VideoWriter_fourcc(*'DIVX'), 3, size)
 	for i in range(len(img_array)):
 	    out.write(img_array[i])
