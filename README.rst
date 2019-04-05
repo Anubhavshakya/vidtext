@@ -1,20 +1,5 @@
-{{ cookiecutter.package_name }}
-{{ cookiecutter.package_name|count * "=" }}
-
-{% if cookiecutter.readme_pypi_badge -%}
-.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.package_name }}.svg
-    :target: https://pypi.python.org/pypi/{{ cookiecutter.package_name }}
-    :alt: Latest PyPI version
-{%- endif %}
-
-{% if cookiecutter.readme_travis_badge -%}
-.. image:: {{ cookiecutter.readme_travis_url }}.png
-   :target: {{ cookiecutter.readme_travis_url }}
-   :alt: Latest Travis CI build status
-{%- endif %}
-
-{{ cookiecutter.package_description }}
-
+# vidtext
+Vidtext is a python library which provides the functionality to convert the text directly into video. vidtext used rake_nltk library to tokenization the text. then select the highest score token to make an image according to the token.
 Usage
 -----
 
