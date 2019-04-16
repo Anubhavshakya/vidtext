@@ -1,4 +1,4 @@
-from image_utils import ImageText
+from .image_utils import ImageText
 from PIL import Image
 import random
 import string
@@ -7,7 +7,7 @@ import os
 from .directory import TempDir
 from .text import Text
 from .imagesource import getImage
-def TextToVideo(sourceData):
+def TextToVideo(sourceData,vs=0):
 	i = 'A'
 	color = 'white'
 	font = "calibri.ttf"
@@ -31,7 +31,7 @@ def TextToVideo(sourceData):
 		size = (width,height)
 		img_array.append(videoimg)
 		i = ''.join(random.choices(string.ascii_uppercase + string.digits))
-	out = cv2.VideoWriter('project.avi',cv2.VideoWriter_fourcc(*'DIVX'), 3, size)
+	out = cv2.VideoWriter('project.avi',cv2.VideoWriter_fourcc(*'DIVX'), vs, size)
 	for i in range(len(img_array)):
 	    out.write(img_array[i])
 	out.release()
